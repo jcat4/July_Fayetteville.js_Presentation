@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>How The Browser Renders</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/custom.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<!-- Intro -->
+				<section>Hello! 👋<br> Welcome to Fayetteville.js 🤠 </section>
+				<section>
+					<div>The name's Joey 👺🙀</div>
+					<img src="img/spoogy.jpg" alt="">
+				</section>
+
+				<!-- Title -->
+				<section>How The Browser Renders <br> 🖥 🎨</section>
+
+				<!-- Meme -->
+				<section>
+					<div>
+						<em>"Apex is better than Fortnite"</em>
+					</div>
+					<small class="block">- Harry S. Truman</small>
+					<div>
+						<img src="img/JFK.jpg" alt="Grover Cleveland">
+					</div>
+				</section>
+
+				<!-- Actual Quote -->
+				<section>
+					<div>
+						<img class="smaller" src="img/ilya.jpg" alt="">
+					</div>
+					<div style="font-size: 90%;">
+						<em>"Delivering a <strong>fast</strong> web experience requires a lot of work from the browser, but almost all of it is hidden from us web developers. Even a basic web page with limited to no interactivity, we just write up some HTML and CSS, and we can open and view a pretty page in our web browser."</em>
+						<div>- Ilya Grigorik</div>
+					</div>
+				</section>
+
+				<!-- Computer works hard -->
+				<section>
+					<div class="split">
+						<img src="img/proud.jpg" alt="">
+					</div>
+					<div class="split">
+						<img class="plain-image" src="img/shit_site.png" alt="">
+					</div>
+				</section>
+
+				<!-- End Slide -->
+				<section>
+					<h2>Thanks! 😃</h2>
+					<div>Questions?</div>
+				</section>
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				hash: true,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/highlight/highlight.js' },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,28 @@
+img {
+  height: 50vh;
+}
+
+img.smaller {
+  height: 30vh;
+}
+
+.plain-image {
+  border: none !important;
+  background: none !important;
+  box-shadow: none !important;
+}
+
+.block {
+  display: block;
+}
+
+.split {
+  width: 50%;
+  display: inline;
+  padding: 0 10px;
+}
+
+.split > img {
+  width: 40%;
+  height: auto;
+}
