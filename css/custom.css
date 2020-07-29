@@ -26,3 +26,7 @@ img.smaller {
   width: 40%;
   height: auto;
 }
+
+.white-bg {
+  background-color: white !important;
+}
