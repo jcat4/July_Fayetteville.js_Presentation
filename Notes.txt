@@ -1,14 +1,14 @@
 # INTRO
 - Intro
-- My name's Joey, here I am with SPOOKY Pinocchio
-- title
+- My name's Joey, at crystal bridges with SPOOKY Pinocchio, fiance wanted the photo
+- title - how the browser renders content
 
-# Getting started
+# Getting started with quote
 - meme
-- Illya, performance guru at google, read quote
+- Illya Grigorik, performance guru at google, read quote
 - So even the simple websites you made when you were 12 have a fairly complicated process in displaying anything in the browser
 
-# Why?
+# WHY?
 - Okay, why learn this? I can just write div whatever and it'll work.
 - it's cool
 - Optimizing a page’s performance requires that we understand some of the intermediate steps required in transforming our
@@ -24,18 +24,18 @@
 - 1. The browser converts the file of bits and bytes into characters based on the file’s encoding (like UTF-8)
 - 2. The browser converts those characters into tokens. Common elements like like <body> and <html> are tokenized, giving them their own meaning and rules in such a way that lexing (the next step) can take place.
 - 3. Lexing is where those tokens are converted into actual objects that fully define the rules and properties with each element of the markup.
-- 4. Dom Construction organizes the rules and relationships of the tokens, taking into account parent-child relationships, builds out a tree of these tokens.
+- 4. Dom Construction organizes the rules and relationships of the nodes, taking into account parent-child relationships, builds out a tree of these nodes.
 
-# Looks
-- DOM doesn't tell us anything about how the page should LOOK
+# LOOKS
+- DOM doesn't tell us anything about how the page should LOOK. Just what the nodes are and what their relationships are to one another
 - (Almost) no on wants their site to look like this
 - CSSOM! Essentially, HTML process carries over, but for CSS
 - why a tree? it makes sense for HTML with nesting and the like, but why CSS?
-- specicity! the browser starts with the most general rule applicable to that node (for example, if it is a child of a body element, then all body styles apply)
-  and then recursively refines the computed styles by applying more specific rules; that is, the rules "cascade down."
+- specicity! the browser starts with the most general rule applicable to that node (for example, if it is a child of a body element, then all body styles apply. Mention span color and display none).
+  and then recursively refines the computed styles by applying more specific rules; that is, the rules "cascade down." Mention span color and display none
 - only showing our overrides. User agent styles: default styles provided by the browser. I.e. default margins on headers
 
-# Render Tree
+# RENDER TREE
 - CSSOM and DOM separate trees. How do work?
 - meme fusion
 - render tree. only content relevant for rendering is included (ex: scripting and header tags excluded)
@@ -47,7 +47,7 @@
 - color is simple. Show thing, make it a color
 - but??? all the bullet point stuff
 - layout, does the stuff
-- now, we can paint. Turn stuff into pixels. Color is cheap, shadows are less cheap, blur is p expensive, etc.
+- now, we can paint. Turn stuff into pixels. Not all styles are equal. Color is cheap, shadows are less cheap, blur is p expensive, etc.
 - compositing. Paint paints the layerss, compositing puts them together, in order
 - tl;dr flow
 - optimization - think animations, especially! emphasize the retriggering part
@@ -63,3 +63,4 @@ https://googlesamples.github.io/web-fundamentals/fundamentals/performance/critic
 - Layout, Paint, Composite
 
 4 me: look at layout, paint, etc.
+# Todo look into examples, like the gradient border bottom for page slider, margin/position changes triggering layout, etc.
