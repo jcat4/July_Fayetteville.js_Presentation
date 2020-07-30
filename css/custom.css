@@ -6,6 +6,11 @@ img.smaller {
   height: 30vh;
 }
 
+img.wide {
+  width: 100%;
+  height: auto;
+}
+
 .plain-image {
   border: none !important;
   background: none !important;

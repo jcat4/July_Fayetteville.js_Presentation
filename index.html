@@ -28,14 +28,21 @@
 		<div class="reveal">
 			<div class="slides">
 				<!-- Intro -->
-				<section>Hello! 👋<br> Welcome to Fayetteville.js 🤠 </section>
 				<section>
-					<div>The name's Joey 👺🙀</div>
+					<h3>Hello! 👋</h3>
+					Welcome to Fayetteville.js 🤠
+				</section>
+				<section>
+					<h3>The name's Joey 👺🙀</h3>
 					<img src="img/spoogy.jpg" alt="">
 				</section>
 
 				<!-- Title -->
-				<section>How The Browser Renders <br> 🖥 🎨</section>
+				<section>
+					<h3>
+						How The Browser Renders <br> 🖥 🎨
+					</h3>
+				</section>
 
 				<!-- Meme -->
 				<section>
@@ -74,33 +81,186 @@
 					Okay, but... <br> Why would I want to learn this?
 				</section>
 				<section>
-					1. It's cool 🤷‍♂️
+					<h3>1. It's cool 🤷‍♂️</h3>
 				</section>
 				<section>
-					<div>2. Performance tuning</div>
+					<h3>2. Performance tuning</h3>
 					<img class="white-bg" src="img/progressive-rendering.png" alt="">
 				</section>
 
 				<section>
-					The Critical Rendering Path&trade;
+					<h3>
+						The Critical Rendering Path&trade;
+					</h3>
 				</section>
 
 				<!-- markup + tree -->
 				<section>
-					<div>Some Basic Markup</div>
+					<h3>Some Basic Markup</h3>
 					<img src="img/markup.png" alt="">
 				</section>
 				<section>
-					<div>Document Object Model (DOM)</div>
+					<h3>Document Object Model (DOM)</h3>
 					<img src="img/dom-tree.png" alt="">
 				</section>
 
 				<!-- Overview -->
 				<section>
-					<div>
+					<h3>
 						Process Overview
-					</div>
+					</h3>
 					<img class="white-bg" src="img/full_process.png" alt="">
+				</section>
+
+				<!-- Step 1. Conversion -->
+				<section>
+					<h3>1. Conversion</h3>
+					<img class="wide" src="img/bytes_to_chars.jpg" alt="">
+				</section>
+
+				<!-- Step 2. Tokenization -->
+				<section>
+					<h3>2. Tokenization</h3>
+					<img class="wide" src="img/chars_to_tokens.jpg" alt="">
+				</section>
+
+				<!-- Step 3. Lexing -->
+				<section>
+					<h3>3. Lexing</h3>
+					<img class="wide" src="img/tokens_to_nodes.jpg" alt="">
+				</section>
+
+				<!-- Step 4. Dom Construction -->
+				<section>
+					<h3>4. Dom Construction</h3>
+					<img class="wide" src="img/nodes_to_dom.jpg" alt="">
+				</section>
+
+				<!-- What about CSS? -->
+				<section>
+					<h3>What about looks? 💅</h3>
+				</section>
+
+				<section>
+					<img src="img/no_style.png" alt="">
+					<img src="img/disgust.jpg" alt="">
+				</section>
+
+				<section>
+					<h3>CSS Object Model (CSSOM)</h3>
+					<img class="wide" src="img/cssom-construction.png" alt="">
+					<img class="wide" src="img/cssom-tree.png" alt="">
+				</section>
+
+				<!-- Why CSSOM tree? -->
+				<section>
+					<h3>
+						Why is the CSSOM a tree? 🤔
+					</h3>
+				</section>
+				<section>
+					<h3>
+						Efficiently Determine Specificity!
+					</h3>
+					<ul>
+						<li>Apply general rules</li>
+						<li>Recursivley apply more specific rules</li>
+						<li>The rules "cascade down"</li>
+					</ul>
+					<img class="small" src="img/cssom-tree.png" alt="">
+				</section>
+				<section>
+					<h3>
+						Disclaimer 🚨
+					</h3>
+					<div>
+						Tree shown does not include  <br>  user agent styles
+					</div>
+				</section>
+
+				<!-- Render Tree -->
+				<section>
+					So... <br> How does the DOM <em>use</em> the CSSOM?
+				</section>
+				<section>
+					<img src="img/fusion.jpg" alt="">
+				</section>
+				<section>
+					<h3>Render Tree</h3>
+					<img src="img/render-tree-construction.png" alt="">
+				</section>
+
+				<!-- Layout, Paint, etc. -->
+				<section>
+					<h3>Okay, cool!</h3>
+					So we just display it now, right???
+					<br>
+					<br>
+					👩‍🎨 👨‍🎨
+				</section>
+				<section><img src="img/but_wait.gif" alt=""></section>
+				<section>Color and stuff is pretty easy.</section>
+				<section>
+					<h3>But...</h3>
+					<br>
+					<ul>
+						<li><em>Where</em> does stuff go?</li>
+						<li><em>How big</em> should stuff be?</li>
+						<li>How do these things impact the position of <em>other</em> elements</li>
+						<li>What about element wrapping?</li>
+						<li>Height calculations?</li>
+						<li>Nested calculations? (ex: half width of half width element)</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Layout</h3>
+					(also know as "reflow")
+					<br>
+					<img src="img/layout-viewport.png" alt="">
+				</section>
+				<section>
+					<h3>Paint</h3>
+					(also known as "rasterization")
+					<br>
+					<br>
+					Complexity varies by style
+				</section>
+				<section>
+					Finally,
+					<h3>Compositing</h3>
+					<br>
+					(organizing the layers)
+				</section>
+				<section>
+					<h3>TL;DR</h3>
+					<br>
+					<ol>
+						<li>Render Tree Construction</li>
+						<li>Layout</li>
+						<li>Paint</li>
+						<li>Composite</li>
+					</ol>
+				</section>
+				<section>
+					<h3>Optimization!</h3>
+
+					Different CSS properties trigger different steps in the process.
+					<br>
+					<br>
+					If a step is retriggered, all following steps must also be reprocessed!
+				</section>
+				<section>
+					<h3>BUT...</h3>
+					This actually varies from browser to browser 😅
+				</section>
+				<section>
+					<a class="block" href="https://csstriggers.com/">csstriggers.com</a>
+					<img class="plain-image" src="img/csstriggers.png" alt="">
+				</section>
+
+				<!-- Examples -->
+				<section>
+					Examples!
 				</section>
 
 				<!-- End Slide -->
